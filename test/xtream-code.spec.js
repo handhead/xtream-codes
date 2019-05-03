@@ -14,15 +14,6 @@ describe("Xtream Code", function () {
                 .and.to.have.property('key', undefined);
         });
         it('new', function () {
-            // http://179.124.136.19:8000/api.php?action=user&sub=create
-            // username
-            // password
-            // max_connections
-            // is_restreamer
-            // exp_date
-            // bouquet
-            // api_pass
-
             var panel = new Panel('http://179.124.136.19:8000', 'handhead@2019');
             expect(panel).to.be.an.instanceof(Panel)
                 .and.to.have.property('url', 'http://179.124.136.19:8000')

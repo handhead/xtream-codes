@@ -32,9 +32,13 @@ describe("Xtream Code Panel", function () {
         it('new empty', function () {
             expect(panel.newLine({})).to.be.an('error');
         });
-        it('new with success', function () {
-            let created = panel.newLine(line);
-            expect(create).to.be.an('object');
+        it('new with success', function (done) {
+            panel.newLine(line)
+                .then(created => {
+                    expect(created).to.be.an('object');
+                    expect(created.result).to.be.true;
+                    done();
+                });
         });
     });
 });

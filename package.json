@@ -27,6 +27,7 @@
     "mocha": "^6.1.4"
   },
   "dependencies": {
-    "@hapi/joi": "^15.0.1"
+    "@hapi/joi": "^15.0.1",
+    "isomorphic-fetch": "^2.2.1"
   }
 }

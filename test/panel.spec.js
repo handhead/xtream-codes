@@ -33,12 +33,14 @@ describe("Xtream Code Panel", function () {
             expect(panel.newLine({})).to.be.an('error');
         });
         it('new with success', function (done) {
-            panel.newLine(line)
-                .then(created => {
-                    expect(created).to.be.an('object');
-                    expect(created.result).to.be.true;
-                    done();
-                });
+            const created = panel.newLine(line);
+            expect(created).to.be.an('object');
+            expect(created.result).to.be.true;
+            // .then(created => {
+            //     expect(created).to.be.an('object');
+            //     expect(created.result).to.be.true;
+            //     done();
+            // });
         });
     });
 });

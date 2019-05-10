@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@hapi/joi": "^15.0.1",
-    "isomorphic-fetch": "^2.2.1"
+    "isomorphic-fetch": "^2.2.1",
+    "qs": "^6.7.0"
   }
 }

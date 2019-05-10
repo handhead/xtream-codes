@@ -27,7 +27,12 @@ describe("Xtream Code Panel", function () {
 
     describe('Line', function () {
         let line = {
-            username: '60011873396',
+            username: 'vinicius',
+            password: 'vinicius123',
+            max_connections: 1,
+            is_restreamer: false,
+            exp_date: parseInt(Date.now() / 1000) + 10,
+            bouquet: [1],
         };
         it('new empty', function () {
             expect(panel.newLine({})).to.be.an('error');

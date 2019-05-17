@@ -23,6 +23,12 @@
   "homepage": "https://github.com/handhead/xtream-codes#readme",
   "devDependencies": {
     "chai": "^4.2.0",
+    "dotenv": "^8.0.0",
     "mocha": "^6.1.4"
+  },
+  "dependencies": {
+    "@hapi/joi": "^15.0.1",
+    "isomorphic-fetch": "^2.2.1",
+    "qs": "^6.7.0"
   }
 }

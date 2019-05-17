@@ -36,6 +36,12 @@ build/Release
 node_modules/
 jspm_packages/
 
+# NPM Lock
+package-lock.*
+
+# Yarn Lock
+yarn.lock
+
 # TypeScript v1 declaration files
 typings/
 
@@ -55,7 +61,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+.env*
 
 # next.js build output
 .next

@@ -26,13 +26,15 @@ describe("Xtream Code Panel", () => {
     });
 
     describe('Line', () => {
-        let line = {
+        const line = {
             username: 'vinicius',
             password: 'vini1234',
+            member_id: 2,
             max_connections: 2,
-            exp_date: parseInt(Date.now() / 1000) + 120,
+            exp_date: parseInt(Date.now() / 1000) + 10 * 60,
             bouquet: [1],
         };
+        let stored_line;
         it('new empty', () => {
             expect(panel.newLine({})).to.be.an('error');
         });
@@ -44,6 +46,11 @@ describe("Xtream Code Panel", () => {
                     expect(created).to.have.property('created_id');
                     expect(created).to.have.property('username', line.username);
                     expect(created).to.have.property('password', line.password);
+                    stored_line = {
+                        id: created.created_id,
+                        username: created.username,
+                        password: created.password,
+                    };
                     done();
                 }).catch((error) => done(error));
         });
@@ -57,8 +64,9 @@ describe("Xtream Code Panel", () => {
                 }).catch((error) => done(error));
         });
         // it('delete', done => {
-        //     panel.deleteLine(line)
+        //     panel.deleteLine(stored_line)
         //         .then(deleted => {
+        //             console.log(deleted);
         //             expect(deleted).to.be.an('object');
         //             expect(deleted.result).to.be.true;
         //             done();
